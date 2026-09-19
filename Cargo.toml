@@ -1,0 +1,24 @@
+[package]
+name = "pgtop"
+version = "0.1.0"
+edition = "2021"
+description = "Live view of a running Postgres: active queries by duration, lock waits and who is blocking whom, idle-in-transaction connections"
+license = "MIT"
+authors = ["Animesh Raj <animesh080808@gmail.com>"]
+repository = "https://github.com/itsarraj/pgtop"
+readme = "README.md"
+keywords = ["postgres", "monitoring", "pg-stat-activity", "locks", "top"]
+categories = ["command-line-utilities"]
+
+[lib]
+name = "pgtop"
+path = "src/lib.rs"
+
+[[bin]]
+name = "pgtop"
+path = "src/main.rs"
+
+[dependencies]
+postgres = "0.19"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
