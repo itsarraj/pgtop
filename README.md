@@ -8,6 +8,12 @@ install on a box you may not want to pip install on. There is no small
 Rust equivalent. This is one: a single static binary, a connection
 string, and a snapshot every couple of seconds.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
